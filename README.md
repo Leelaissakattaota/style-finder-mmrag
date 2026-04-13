@@ -1,44 +1,37 @@
-# 🛍️ Style Finder: Multimodal RAG Application
+# 👗 Style Finder — Multimodal RAG Fashion Assistant
 
-![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
-![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&logo=PyTorch&logoColor=white)
-![Gradio](https://img.shields.io/badge/Gradio-orange?style=for-the-badge&logo=gradio&logoColor=white)
-![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)
+![Language](https://img.shields.io/badge/Language-Python%203.11-3776AB?style=flat-square&logo=python&logoColor=white)
+![LLM](https://img.shields.io/badge/LLM-Llama%203.2%20Vision-052FAD?style=flat-square&logo=ibm&logoColor=white)
+![RAG](https://img.shields.io/badge/RAG-Multimodal%20Image%20Embeddings-FF6B35?style=flat-square)
+![UI](https://img.shields.io/badge/UI-Gradio-FF7C00?style=flat-square)
+![Status](https://img.shields.io/badge/Status-Completed-brightgreen?style=flat-square)
 
-Welcome to **Style Finder**, an advanced AI-powered fashion assistant. This project demonstrates the power of **Multimodal Retrieval Augmented Generation (MM-RAG)**, allowing users to upload images of outfits and receive detailed metadata, material descriptions, and purchase links.
+## 📌 Project Overview
+**Multimodal RAG fashion assistant** that takes an outfit photo and finds similar styles from a pre-built Swift fashion dataset. Uses image embeddings for visual similarity search + Llama 3.2 Vision (IBM Watsonx) for natural language fashion analysis and alternative suggestions.
 
----
+**Domain:** Multimodal RAG — Fashion AI  
+**Vision LLM:** meta-llama/llama-3-2-vision (IBM Watsonx)  
+**RAG:** Image embedding similarity search (pickle dataset)
 
-## 🚀 Overview
-**MM-RAG** (Multimodal Retrieval Augmented Generation) is a cutting-edge approach that combines the strengths of multimodal understanding—processing multiple data types like images and text—with retrieval-augmented generation. While standard AI models are limited to their training data, this application bridges the gap by retrieving relevant information from a specific fashion database to enhance accuracy and detail.
+## 🛠️ Tech Stack
+| Component | Technology |
+|---|---|
+| Vision LLM | Llama 3.2 Vision (IBM Watsonx) |
+| Image Processing | PIL + PyTorch (ImageProcessor) |
+| RAG Dataset | Pre-built Swift style embeddings (.pkl) |
+| UI | Gradio |
+| Config | Python config module |
 
----
+## 🚀 Key Features
+- Upload outfit photo → find visually similar styles
+- Multimodal RAG: image embeddings + vision LLM
+- Pre-built fashion dataset with 6 example images
+- Alternative style suggestions with natural language
+- Modular architecture: ImageProcessor + LlamaVisionService
 
-## 🛠️ Key Features
-* 🌈 **Multimodal Input**: Accepts both images and text queries to provide a comprehensive user experience.
-* 🔍 **Intelligent Retrieval**: Uses a pre-trained **ResNet50** model to convert images into feature representations for visual similarity matching.
-* 📊 **Contextual Augmentation**: Merges retrieved structured data (prices, URLs, descriptions) with the original query to provide the LLM with "proprietary knowledge".
-* 🤖 **Advanced Generation**: Leverages the **Llama Vision** model to produce structured, professional catalog-style analysis grounded in retrieved data.
+## 🎓 Skills Demonstrated
+Multimodal RAG · Vision LLM · Image embeddings · Fashion AI · IBM Watsonx · Gradio UI
 
----
-
-## 🏗️ The MM-RAG Architecture
-The application follows a professional four-step pipeline:
-
-1.  **🔵 Data Indexing**: Diverse data types are converted into embeddings and indexed in a vector database for efficient searching.
-2.  **🟢 Data Retrieval**: The system performs a semantic search using cosine similarity to find the closest visual and textual matches.
-3.  **🟡 Augmentation**: The retrieved multimodal data is combined with the original user query to enrich the context.
-4.  **🔴 Response Generation**: An augmented query is sent to a multimodal generative model to produce a response blending all information sources.
-
----
-
-## 📂 Project Structure
-```text
-style-finder/
-├── app.py                # Main application logic & Gradio UI
-├── models/
-│   ├── image_processor.py # Image encoding using ResNet50
-│   └── llm_service.py     # Llama Vision model integration
-├── utils/
-│   └── helpers.py         # Data formatting & Base64 utilities
-└── swift-style-embeddings.pkl # Pre-computed vector embeddings
+## 🤝 Connect
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Leela%20A-0077B5?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/leela-a)
+[![Gmail](https://img.shields.io/badge/Gmail-attotaleelaissak@gmail.com-D14836?style=flat-square&logo=gmail&logoColor=white)](mailto:attotaleelaissak@gmail.com)
